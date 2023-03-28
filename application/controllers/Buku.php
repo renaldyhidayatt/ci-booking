@@ -1,5 +1,5 @@
 <?php
-
+defined('BASEPATH') OR exit('No direct script access allowed');
 class Buku extends CI_Controller{
     public function __construct()
     {
@@ -69,8 +69,6 @@ class Buku extends CI_Controller{
         redirect('buku/kategori');
     }
 
-
-    // Region Buku
     public function index()
     {
         $data['judul'] = 'Data Buku';
@@ -130,7 +128,6 @@ class Buku extends CI_Controller{
                 'numeric' => 'Yang anda masukan bukan angka'
         ]);
 
-        //konfigurasi sebelum gambar diupload
         $config['upload_path'] = './assets/img/upload/';
         $config['allowed_types'] = 'jpg|png|jpeg';
         $config['max_size'] = '3000';
