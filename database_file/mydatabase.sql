@@ -6,13 +6,13 @@ CREATE TABLE `booking` (
 );
 
 CREATE TABLE `booking_detail` (
-  `id` int(11) PRIMARY KEY NOT NULL,
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `id_booking` varchar(12) NOT NULL,
   `id_buku` int(11) NOT NULL
 );
 
 CREATE TABLE `buku` (
-  `id` int(30) PRIMARY KEY NOT NULL,
+  `id` int(30) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `judul_buku` varchar(128) NOT NULL,
   `id_kategori` int(11) NOT NULL,
   `pengarang` varchar(64) NOT NULL,
@@ -32,12 +32,12 @@ CREATE TABLE `detail_pinjam` (
 );
 
 CREATE TABLE `kategori` (
-  `id` int(11) PRIMARY KEY NOT NULL,
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `kategori` varchar(45) NOT NULL
 );
 
 CREATE TABLE `menu` (
-  `id` int(11) PRIMARY KEY NOT NULL,
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `menu` varchar(128) NOT NULL
 );
 
@@ -53,12 +53,12 @@ CREATE TABLE `pinjam` (
 );
 
 CREATE TABLE `role` (
-  `id` int(11) PRIMARY KEY NOT NULL,
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `role` varchar(128) NOT NULL
 );
 
 CREATE TABLE `temp` (
-  `id` int(11) PRIMARY KEY NOT NULL,
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `tgl_booking` datetime DEFAULT NULL,
   `id_user` varchar(12) NOT NULL,
   `email_user` varchar(128) DEFAULT NULL,
@@ -71,7 +71,7 @@ CREATE TABLE `temp` (
 );
 
 CREATE TABLE `user` (
-  `id` int(11) PRIMARY KEY NOT NULL,
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `nama` varchar(128) NOT NULL,
   `email` varchar(128) NOT NULL,
   `image` varchar(128) NOT NULL,

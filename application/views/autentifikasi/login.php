@@ -12,7 +12,7 @@
                                     <h1 class="h4 text-gray-900 mb4">Halaman Login!!</h1>
                                 </div>
                                 <?= $this->session->flashdata('pesan'); ?>
-                                <form class="user" method="post" action="<?= base_url('authentikasi'); ?>">
+                                <form class="user" method="post" action="<?= base_url('auth'); ?>">
                                     <div class="form-group">
                                         <input type="text" class="form-control form-control-user" value="<?= set_value('email'); ?>" id="email" placeholder="Masukkan Alamat Email" name="email">
                                         <?= form_error('email','<small class="text-danger pl-3">', '</small>'); ?>
@@ -27,10 +27,10 @@
                                 </form>
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="<?= base_url('authentikasi/lupaPassword'); ?>">Lupa Password?</a>
+                                    <a class="small" href="<?= base_url('auth/lupaPassword'); ?>">Lupa Password?</a>
                                 </div>
                                 <div class="text-center">
-                                    <a class="small" href="<?= base_url('authentikasi/register'); ?>">Daftar Member!</a>
+                                    <a class="small" href="<?= base_url('auth/register'); ?>">Daftar Member!</a>
                                 </div>
                             </div>
                         </div>

@@ -8,7 +8,7 @@
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb4">Daftar Menjadi Member!</h1>
                         </div>
-                        <form class="user" method="post" action="<?= base_url('authentikasi/registrasi'); ?>">
+                        <form class="user" method="post" action="<?= base_url('auth/register'); ?>">
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="nama" name="nama"
                                     placeholder="NamaLengkap" value="<?= set_value('nama'); ?>">
