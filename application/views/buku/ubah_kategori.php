@@ -1,3 +1,4 @@
+<!-- Begin Page Content -->
 <div class="container-fluid">
     <?= $this->session->flashdata('pesan'); ?>
     <div class="row">

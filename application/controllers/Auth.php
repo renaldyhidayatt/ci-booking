@@ -12,7 +12,6 @@ class Auth extends CI_Controller{
         if($this->session->userdata('email')) { redirect('user'); }
 
 
-        // Set method Validation untuk form
         $this->form_validation->set_rules('email', 'Alamat Email',
             'required|trim|valid_email', [
             'required' => 'Email Harus diisi!!',

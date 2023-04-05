@@ -172,7 +172,7 @@ class Buku extends CI_Controller{
     {
         $data['judul'] = 'Ubah Data Buku';
         $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
-        $data['buku'] = $this->ModelBuku->bukuWhere(['id' => $this->uri->segment(3)])->row_array();
+        $data['buku'] = $this->ModelBuku->bukuWhere(['id' => $this->uri->segment(3)])->result_array();
         $kategori = $this->ModelBuku->joinKategoriBuku(['buku.id' => $this->uri->segment(3)])->result_array();
         
         foreach ($kategori as $k) 
@@ -236,7 +236,6 @@ class Buku extends CI_Controller{
                 'numeric' => 'Yang anda masukan bukan angka'
         ]);
 
-        //konfigurasi sebelum gambar diupload
         $config['upload_path'] = './assets/img/upload/';
         $config['allowed_types'] = 'jpg|png|jpeg';
         $config['max_size'] = '3000';
@@ -244,7 +243,6 @@ class Buku extends CI_Controller{
         $config['max_height'] = '1000';
         $config['file_name'] = 'img' . time();
 
-        //memuat atau memanggil library upload
         $this->load->library('upload', $config);
         if ($this->form_validation->run() == false) 
         {
@@ -261,7 +259,6 @@ class Buku extends CI_Controller{
                 $gambar = $image['file_name'];
             } else { $gambar = $this->input->post('old_pict', TRUE); }
             
-            // data postingan
             $data = [
                 'judul_buku' => $this->input->post('judul_buku',true),
                 'id_kategori' => $this->input->post('id_kategori',true),
