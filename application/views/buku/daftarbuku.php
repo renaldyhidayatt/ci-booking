@@ -1,5 +1,13 @@
 <?= $this->session->flashdata('pesan'); ?>
 
+<?= form_error("nama"); ?>
+<?= form_error("alamat"); ?>
+<?= form_error("email"); ?>
+<?= form_error("password"); ?>
+<?= form_error("password1"); ?>
+<?= form_error("password2"); ?>
+
+
 <div style="padding: 25px;">
     <div class="x_panel">
         <div class="x_content">

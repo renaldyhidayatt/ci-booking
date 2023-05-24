@@ -1,8 +1,8 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
 
-class ModelBooking extends CI_Model{
-    public function getData($table)	{ return $this->db->get($table)->row(); }
+class ModelBooking extends CI_Model
+{
+	public function getData($table)	{ return $this->db->get($table)->row(); }
 
 	public function getDataWhere($table, $where)
 	{

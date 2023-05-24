@@ -4,7 +4,6 @@ class Home extends CI_Controller{
 	function __construct() 
 	{
 	 	parent::__construct();
-
 	}
 
 	public function index() 
@@ -61,7 +60,4 @@ class Home extends CI_Controller{
 		$this->load->view('templates/templates-user/modal');
 		$this->load->view('templates/templates-user/footer'); 
 	}
-
-
-    
 }

@@ -93,3 +93,15 @@ INSERT INTO `buku` (`id`, `judul_buku`, `id_kategori`, `pengarang`, `penerbit`, 
 (8, 'From Hobby to Money', 4, 'Deasylawati', 'Elex Media Komputindo', 2015, '87968686787879', 5, 0, 0, 'img1557403658.jpg'),
 (9, 'Buku Saku Pramuka', 8, 'Rudi Himawan', 'Pusat Perbukuan', 2016, '97868687978796', 6, 0, 0, 'img1557404613.jpg'),
 (10, 'Rahasia Keajaiban Bumi', 3, 'Nurul Ihsan', 'Luxima', 2014, '565756565768868', 5, 0, 0, 'img1557404689.jpg');
+
+
+INSERT INTO `kategori` (`id`, `kategori`) VALUES
+(1, 'Komputer'),
+(2, 'Bahasa'),
+(3, 'Sains'),
+(4, 'Hobby'),
+(5, 'Komunikasi'),
+(6, 'Hukum'),
+(7, 'Agama'),
+(8, 'Populer'),
+(9, 'Komik');
