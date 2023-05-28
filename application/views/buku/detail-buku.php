@@ -40,7 +40,7 @@
                 </table>
             </div>
             <div class="flex justify-center mt-4">
-                <a href="/booking/tambahBooking/${id}" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 mr-2">
+                <a href="<?= base_url('booking/tambahBooking/' . $id); ?>" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 mr-2">
                     <svg class="w-4 h-4 mr-1 fas fa-shopping-cart" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                         <path fill="currentColor" d="M544 160h-80V99.37C464 44.38 419.09 0 364.16 0H211.84C156.91 0 112 44.38 112 99.37V160H32C14.33 160 0 174.33 0 192v224c0 17.67 14.33 32 32 32h32v32c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-32h32c17.67 0 32-14.33 32-32V192c0-17.67-14.33-32-32-32zM384 99.37c0-33.22 26.89-59.37 60.16-59.37h152.32c33.26 0 60.16 26.38 60.16 59.37v60.26H384V99.37zm176 352H384V232h176v219.37zM192 232v219.37H32V232h160zm-80 84v28h32v-28h-32zm0-72v28h32v-28h-32zm0-72v28h32v-28h-32zm0-72v28h32v-28h-32z"></path>
                     </svg>
