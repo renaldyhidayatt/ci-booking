@@ -46,6 +46,51 @@ class Laporan extends CI_Controller
 		$this->dompdf->stream('laporan_data_buku.pdf');
 	}
 
+
+	public function laporan_anggota(){
+		$data['judul'] = 'Laporan Data Anggota';
+		$data['anggota'] = $this->ModelUser->getUsers()->result_array();
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/sidebar', $data);
+		$this->load->view('templates/topbar', $data);
+		$this->load->view('member/laporan_anggota', $data);
+		$this->load->view('templates/footer');
+	}
+
+	public function cetak_laporan_anggota(){
+		$data['anggota'] = $this->ModelUser->getUsers()->result_array();
+
+		$this->load->view('member/laporan_print_anggota', $data);
+	}
+
+
+	public function laporan_anggota_pdf(){
+		$this->load->library('Dompdf_gen');
+
+		$data['anggota'] = $this->ModelUser->getUsers()->result_array();
+
+		$this->load->view('member/laporan_pdf_anggota', $data);
+
+		$paper = 'A4';
+		$orien = 'landscape';
+		$html = $this->output->get_output();
+		
+		$this->dompdf->set_paper($paper, $orien);
+		$this->dompdf->load_html($html);
+		$this->dompdf->render();
+		$this->dompdf->stream('laporan_data_member.pdf');
+	}
+
+	public function export_excel_anggota(){
+		$data = array(
+			'title' => 'Laporan Anggota',
+			'anggota' => $this->ModelUser->getUsers()->result_array(),
+		);
+		
+		$this->load->view('member/export_excel_anggota', $data);
+	}
+
+
 	public function export_excel()
 	{
 		$data = array(

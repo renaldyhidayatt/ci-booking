@@ -13,8 +13,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 </head>
 
-<body>
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+<body class="bg-gray-100">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 shadow-lg">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="<?= base_url(); ?>"class="flex items-center">
                 <span  class="self-center text-2xl font-semibold text-gray-900 ">

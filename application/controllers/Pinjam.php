@@ -87,17 +87,17 @@ class Pinjam extends CI_Controller
 	}
 
     public function ubahStatus()
-    {
-        $id_buku = $this->uri->segment(3);
-        $no_pinjam = $this->uri->segment(4);
-        $where = ['id_buku' => $this->uri->segment(3),];
-        $tgl = date('Y-m-d');
-        $status = 'Kembali';
-        //update status menjadi kembali pada saat buku dikembalikan
-        $this->db->query("UPDATE pinjam, detail_pinjam SET pinjam.status='$status', pinjam.tgl_pengembalian='$tgl' WHERE detail_pinjam.id_buku='$id_buku' AND pinjam.no_pinjam='$no_pinjam'");
-        //update stok dan dipinjam pada tabel buku
-        $this->db->query("UPDATE buku, detail_pinjam SET buku.dipinjam=buku.dipinjam-1, buku.stok=buku.stok+1 WHERE buku.id=detail_pinjam.id_buku");
-        $this->session->set_flashdata('pesan', '<div class="laert alert-message alert-success" role="alert"></div>');
-        redirect(base_url('pinjam'));
-    }
+	{
+		$id_buku = $this->uri->segment(3);
+		$no_pinjam = $this->uri->segment(4);
+		$where = ['id_buku' => $this->uri->segment(3),];
+		$tgl = date('Y-m-d');
+		$status = 'Kembali';
+		//update status menjadi kembali pada saat buku dikembalikan
+		$this->db->query("UPDATE pinjam, detail_pinjam SET pinjam.status='$status', pinjam.tgl_pengembalian='$tgl' WHERE detail_pinjam.id_buku='$id_buku' AND pinjam.no_pinjam='$no_pinjam'");
+		//update stok dan dipinjam pada tabel buku
+		$this->db->query("UPDATE buku, detail_pinjam SET buku.dipinjam=buku.dipinjam-1, buku.stok=buku.stok+1 WHERE buku.id=detail_pinjam.id_buku");
+		$this->session->set_flashdata('pesan', '<div class="laert alert-message alert-success" role="alert"></div>');
+		redirect(base_url('pinjam'));
+	}
 }
